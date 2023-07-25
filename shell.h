@@ -13,7 +13,7 @@
 #include <errno.h>
 
 /**
- * struct builtin - contains a builtin string and related function
+ * struct builtin - will have a functn builtin of a string
  * @type: the builtin command flag
  * @func: the function
  */
@@ -47,7 +47,7 @@ void fork_cmd(info_t *);
 
 /* toem_vars.c */
 int is_chain(info_t *, char *, size_t *);
-void check_chain(info_t *, char *, size_t *, size_t, size_t);
+void chck_chen(char *,size_t, info_t, *size_t *, size_t, );
 int replace_alias(info_t *);
 int replace_vars(info_t *);
 int replace_string(char **, char *);
@@ -158,10 +158,10 @@ int _putchar(char);
 {NULL, NULL, NULL, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, \
 		0, 0, 0}
 /**
- * struct liststr - singly linked list
+ * struct liststr -  linked stingly list
  * @num: the number field
  * @str: a string
- * @next: points to the next node
+ * @next: leads for the next node
  */
 typedef struct liststr
 {
@@ -171,26 +171,26 @@ typedef struct liststr
 } list_t;
 
 /**
- * struct passinfo - contains pseudo-arguements to pass into a function,
- * allowing uniform prototype for function pointer struct
- * @arg: a string generated from getline containing arguements
+ * struct passinfo - arguments (pseudo) to 3be presented in a function,
+ * processing similiar fcntn pointer struct
+ * @arg: a getline containing arguments- for string gen
  * @argv:an array of strings generated from arg
  * @path: a string path for the current command
  * @argc: the argument count
  * @line_count: the error count
  * @err_num: the error code for exit()s
- * @linecount_flag: if on count this line of input
+ * @linecount_flag: line count of input
  * @fname: the program filename
- * @env: linked list local copy of environ
- * @environ: custom modified copy of environ from LL env
+ * @env: copy of environ linked list in local 
+ * @environ: copy (LL env) of custom modified environ 
  * @history: the history node
  * @alias: the alias node
  * @env_changed: on if environ was changed
- * @status: the return status of the last exec'd command
- * @cmd_buf: address of pointer to cmd_buf, on if chaining
+ * @status: previous status last exec'd commd return 
+ * @cmd_buf: the address (if in chain) of the cmd_buf pointer
  * @cmd_buf_type: CMD_type ||, &&, ;
  * @readfd: the fd from which to read line input
- * @histcount: the history line number count
+ * @histcount: count history line x line
  */
 typedef struct passinfo
 {
