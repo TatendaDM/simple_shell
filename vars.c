@@ -47,9 +47,9 @@ int replace_alias(info_t *info)
  * is_chain - test if current char in buffer is a chain delimeter
  * @info: the parameter struct
  * @buf: the char buffer
- * @p: address of current position in buf
+ * @p: positional address of the current buf
  *
- * Return: 1 if chain delimeter, 0 otherwise
+ * Return: 1 delimiter chain, 0 otherwise
  */
 int is_chain(info_t *info, char *buf, size_t *p)
 {
@@ -120,10 +120,10 @@ int replace_vars(info_t *info)
 }
 
 /**
- * check_chain - checks we should continue chaining based on last status
+ * chk_chen - continuous status check for the last chain
  * @info: the parameter struct
  * @buf: the char buffer
- * @p: address of current position in buf
+ * @p: buf positional address of the current
  * @i: starting position in buf
  * @len: length of buf
  *
