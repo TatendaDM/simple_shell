@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * _strcat - joins two strings together
+ * _strcat - process of uniting two strings
  * @dest: buf destin
  * @src: buffer' source
  *
