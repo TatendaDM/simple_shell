@@ -9,7 +9,7 @@
  * Return: old-block name pointer
  */
 
-void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
+void *_realloc(unsigned int new_size, void *ptr, unsigned int old_size)
 
 {
 	char *p;
@@ -40,7 +40,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
  * Return: (s) memory area pointer
  */
 
-char *_memset(char *s, char b, unsigned int n)
+char *_memset(unsigned int n, char *s, char b)
 
 {
 	unsigned int i;
