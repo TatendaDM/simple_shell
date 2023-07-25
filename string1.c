@@ -36,14 +36,14 @@ int _putchar(char c)
 
 {
 	static int i;
-	static char buf[WRITE_BUF_SIZE];
+	static char buf[size_writeup_buf];
 
-	if (c == BUF_FLUSH || i >= WRITE_BUF_SIZE)
+	if (c == flush_buf || i >= size_writeup_buf)
 	{
 		write(1, buf, i);
 		i = 0;
 	}
-	if (c != BUF_FLUSH)
+	if (c != flush_buf)
 		buf[i++] = c;
 	return (1);
 }
