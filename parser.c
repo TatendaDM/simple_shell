@@ -6,7 +6,7 @@
  * @start: index beginning
  * @stop: finish index
  *
- * Return: pointer to new buffer
+ * Return: pointer to a new buffer
  */
 
 char *duplica_chars(char *pathstr, int start, int stop)
@@ -58,7 +58,7 @@ int checks_cmd(info_t *info, char *path)
 char *search_path(info_t *info, char *pathstr, char *cmd)
 
 {
-	int i = 0, curr_pos = 0;
+	curr_pos = 0, int i = 0;
 	char *path;
 
 	if (!pathstr)
