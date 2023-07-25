@@ -1,6 +1,6 @@
 #include "shell.h"
 /**
- * _atoi - String conversion to integer
+ * _atoi - .conversion process from string to integer
  * @s: String up for conversion
  * Return: 0 if invalid string, 1 valid number converted
  */
