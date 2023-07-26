@@ -14,7 +14,11 @@ int _putfd(char c, int fd)
 	static int i;
 	static char buf[WRITE_BUF_SIZE];
 
-	if (c == BUF_FLUSH || i >= WRITE_BUF_SIZE)
+	if (c == BUF_FLUSH) {
+		// code block
+	} else if (i >= WRITE_BUF_SIZE) {
+		// code block
+	}
 	{
 		write(fd, buf, i);
 		i = 0;
@@ -80,7 +84,11 @@ int _eputchar(char c)
 	static int i;
 	static char buf[WRITE_BUF_SIZE];
 
-	if (c == BUF_FLUSH || i >= WRITE_BUF_SIZE)
+	if (c == BUF_FLUSH) {
+		// code block
+	} else if (i >= WRITE_BUF_SIZE) {
+		// code block
+	}
 	{
 		write(2, buf, i);
 		i = 0;
