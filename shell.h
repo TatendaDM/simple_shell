@@ -1,5 +1,5 @@
-#define_SHELL_H_
-#ifndef_SHELL_H_
+#define _SHELL_H_
+#ifndef _SHELL_H_
 
 #include <sys/types.h>
 #include <limits.h>
