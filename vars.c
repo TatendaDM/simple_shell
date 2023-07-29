@@ -120,7 +120,7 @@ int replace_vars(info_t *info)
 }
 
 /**
- * chk_chen - continuous status check for the last chain
+ * check_chain - continuous status check for the last chain
  * @info: the parameter struct
  * @buf: the char buffer
  * @p: buf positional address of the current
