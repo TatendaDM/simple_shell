@@ -19,8 +19,8 @@
  */
 typedef struct builtin
 {
-	char *type;
-	int (*func)(info_t *);
+char *type;
+int (*func)(info_t *);
 } builtin_table;
 
 /* toem_memory.c */
@@ -154,9 +154,6 @@ char *_strdup(const char *);
 void _puts(char *);
 int _putchar(char);
 
-#define INFO_INIT \
-{NULL, NULL, NULL, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, \
-		0, 0, 0}
 /**
  * struct liststr -  linked stingly list
  * @num: the number field
@@ -165,9 +162,9 @@ int _putchar(char);
  */
 typedef struct liststr
 {
-	int num;
-	char *str;
-	struct liststr *next;
+int num;
+char *str;
+struct liststr *next;
 } list_t;
 
 /**
@@ -194,24 +191,24 @@ typedef struct liststr
  */
 typedef struct passinfo
 {
-	char *arg;
-	char **argv;
-	char *path;
-	int argc;
-	unsigned int line_count;
-	int err_num;
-	int linecount_flag;
-	char *fname;
-	list_t *env;
-	list_t *history;
-	list_t *alias;
-	char **environ;
-	int env_changed;
-	int status;
-	char **cmd_buf; /* pointer to cmd ; chain buffer, for memory management */
-	int cmd_buf_type; /* CMD_type ||, &&, ; */
-	int readfd;
-	int histcount;
+char *arg;
+char **argv;
+char *path;
+int argc;
+unsigned int line_count;
+int err_num;
+int linecount_flag;
+char *fname;
+list_t *env;
+list_t *history;
+list_t *alias;
+char **environ;
+int env_changed;
+int status;
+char **cmd_buf; /* pointer to cmd ; chain buffer, for memory management */
+int cmd_buf_type; /* CMD_type ||, &&, ; */
+int readfd;
+int histcount;
 } info_t;
 
 /* 1 if using system getline() */
@@ -219,19 +216,19 @@ typedef struct passinfo
 #define USE_STRTOK 0
 
 /* for command chaining */
-#define CMD_NORM	0
-#define CMD_OR		1
-#define CMD_AND		2
-#define CMD_CHAIN	3
+#define CMD_NORM0
+#define CMD_OR1
+#define CMD_AND2
+#define CMD_CHAIN3
 
-#define HIST_FILE	".simple_shell_history"
-#define HIST_MAX	4096
+#define HIST_FILE".simple_shell_history"
+#define HIST_MAX4096
 
 extern char **environ;
 
 /* for convert_number() */
-#define CONVERT_LOWERCASE	1
-#define CONVERT_UNSIGNED	2
+#define CONVERT_LOWERCASE1
+#define CONVERT_UNSIGNED2
 
 /* for read/write buffers */
 #define READ_BUF_SIZE 1024
