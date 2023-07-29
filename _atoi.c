@@ -1,4 +1,8 @@
 #include "shell.h"
+
+typedef struct {
+    int readfd;
+} info_t;
 /**
  * _atoi - .conversion process from string to integer
  * @s: String up for conversion
