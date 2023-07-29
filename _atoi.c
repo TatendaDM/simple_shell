@@ -1,5 +1,3 @@
-here is a code i worked on, can you help me resolve this error?
-
 #include "shell.h"
 /**
  * _atoi - .conversion process from string to integer
