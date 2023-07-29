@@ -1,13 +1,13 @@
 #include "shell.h"
-
-typedef struct {
-    int readfd;
-} info_t;
 /**
  * _atoi - .conversion process from string to integer
  * @s: String up for conversion
  * Return: 0 if invalid string, 1 valid number converted
  */
+
+typedef struct {
+    int readfd;
+} info_t;
 
 int _atoi(char *s)
 
